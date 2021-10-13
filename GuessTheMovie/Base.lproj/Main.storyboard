@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fFe-Px-x26">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fFe-Px-x26">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="JiL-V0-gXZ">
             <objects>
-                <viewController id="fFe-Px-x26" customClass="ViewController" customModule="CompleteTheMovieTitle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fFe-Px-x26" customClass="ViewController" customModule="GuessTheMovie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OFZ-cC-gw7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,6 +36,9 @@
                                                 <state key="normal" title="Godfather">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectAnswer:" destination="fFe-Px-x26" eventType="touchUpInside" id="xU9-1z-6Et"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0U-GG-xmn">
                                                 <rect key="frame" x="202" y="0.0" width="172" height="45"/>
@@ -43,6 +46,9 @@
                                                 <state key="normal" title="Story">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectAnswer:" destination="fFe-Px-x26" eventType="touchUpInside" id="CFe-sR-iHV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -55,6 +61,9 @@
                                                 <state key="normal" title="Wallstreet">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectAnswer:" destination="fFe-Px-x26" eventType="touchUpInside" id="fCp-dG-Jpg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZ2-0t-Fin">
                                                 <rect key="frame" x="202" y="0.0" width="172" height="45"/>
@@ -62,6 +71,9 @@
                                                 <state key="normal" title="Vendetta">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectAnswer:" destination="fFe-Px-x26" eventType="touchUpInside" id="y8i-d2-2iO"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -89,6 +101,10 @@
                     <connections>
                         <outlet property="movieImageView" destination="eAL-46-1Er" id="c66-TT-3tI"/>
                         <outlet property="movieTitleLabel" destination="Sd8-W8-P3y" id="QbG-Fr-P6p"/>
+                        <outletCollection property="anwerButtons" destination="YNz-U7-kfb" collectionClass="NSMutableArray" id="zNp-bz-0jh"/>
+                        <outletCollection property="anwerButtons" destination="X0U-GG-xmn" collectionClass="NSMutableArray" id="mvn-xd-MW7"/>
+                        <outletCollection property="anwerButtons" destination="s1k-Ig-amU" collectionClass="NSMutableArray" id="H5f-uO-jZV"/>
+                        <outletCollection property="anwerButtons" destination="DZ2-0t-Fin" collectionClass="NSMutableArray" id="JAg-CY-Fxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYd-AR-gwA" sceneMemberID="firstResponder"/>
